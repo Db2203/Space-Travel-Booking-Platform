@@ -18,22 +18,17 @@ html, body {
   min-height: 100vh;
 }
 
-/* 
-  1) We remove heavy blurs—just a subtle overlay for mild contrast
-  2) Keep some gentle starry vibe without overbearing glassmorphism
-*/
-
-/* Subtle cosmic overlay: lighten or remove if you want zero overlay */
+/* Subtle cosmic overlay */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
-/* Navbar: sticky at top, subtle neon accent on hover */
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -76,7 +71,7 @@ body::before {
   color: #e640ff;
 }
 
-/* Hero Section: no heavy blur overlay, just a mild dark fade */
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 80vh;
@@ -87,7 +82,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Mild dark overlay on hero for text clarity */
 .hero::after {
   content: "";
   position: absolute;
@@ -103,7 +97,6 @@ body::before {
   animation: fadeInUp 1.2s ease-out;
 }
 
-/* Crisp neon glow on hero text */
 .hero-content h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3em;
@@ -117,13 +110,11 @@ body::before {
   text-shadow: 0 0 6px rgba(230, 64, 255, 0.5);
 }
 
-/* Subtle scale animation for cosmic vibe */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Neon gradient button */
 .btn-hero {
   background: linear-gradient(45deg, #ad00ff, #ff00aa);
   color: #fff;
@@ -140,7 +131,7 @@ body::before {
   box-shadow: 0 0 12px #ff00aa;
 }
 
-/* Shared Container: minimal blur or none, just a translucent background */
+/* SHARED CONTAINER */
 .container {
   position: relative;
   z-index: 1;
@@ -159,22 +150,39 @@ body::before {
   100% { opacity: 1; }
 }
 
-/* Headings with subtle neon glow */
+/* BOOKING SECTION - CENTER EVERYTHING */
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontally center items */
+  text-align: center;    /* center text */
+}
+
+/* DASHBOARD SECTION - OPTIONAL CENTER */
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* HEADINGS with subtle neon glow */
 .booking-section h2,
 .dashboard-section h2,
 .ai-tip-section h2 {
   font-family: 'Orbitron', sans-serif;
-  text-align: center;
   margin-bottom: 25px;
   font-size: 1.8em;
   text-shadow: 0 0 6px rgba(230, 64, 255, 0.6);
 }
 
-/* Form styling: crisp borders, neon focus ring */
+/* FORM STYLING */
 .form-group {
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 400px;       /* limit form width so it's not too wide */
 }
 
 .form-group label {
@@ -189,15 +197,15 @@ body::before {
   border-radius: 5px;
   background: transparent !important;
   background-color: transparent !important;
-  color: #f8efef;
+  color: #ffffff;
   font-size: 1em;
   outline: none;
   transition: border 0.3s;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
 }
+
 select option {
   background: #474545 !important; /* or any dark color */
   color: #fff !important;
@@ -208,7 +216,7 @@ select option {
   border: 1px solid #e640ff;
 }
 
-/* General Buttons: same neon gradient */
+/* GENERAL BUTTONS */
 .btn-book,
 .btn-clear,
 .btn-back,
@@ -233,11 +241,13 @@ select option {
   box-shadow: 0 0 12px #ff00aa;
 }
 
-/* Booking Cards */
+/* BOOKING CARDS */
 .booking-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .booking-card {
@@ -250,6 +260,7 @@ select option {
   border: 1px solid rgba(255,255,255,0.1);
   position: relative;
   overflow: hidden;
+  margin: 0 auto; /* center the card horizontally if narrower than parent */
 }
 
 .booking-card h3 {
@@ -264,7 +275,7 @@ select option {
   margin: 0;
 }
 
-/* AI Tip styling */
+/* AI TIP STYLING */
 .ai-tip-section .tip {
   font-size: 1.2em;
   font-style: italic;
@@ -272,7 +283,7 @@ select option {
   text-align: center;
 }
 
-/* Modal: crisp edges, no heavy blur */
+/* MODAL */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -332,7 +343,7 @@ select option {
   box-shadow: 0 0 12px #ff00aa;
 }
 
-/* Footer: minimal, crisp, no heavy blur */
+/* FOOTER */
 .footer {
   background: rgba(0,0,0,0.6);
   padding: 15px 30px;
@@ -363,7 +374,7 @@ select option {
   transform: scale(1.1);
 }
 
-/* Media Query for smaller screens */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
