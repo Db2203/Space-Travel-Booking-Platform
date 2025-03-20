@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Space-Travel-Booking-Platform/static/css/main.c54d8337.css",
+    "main.css": "/Space-Travel-Booking-Platform/static/css/main.4539b42c.css",
     "main.js": "/Space-Travel-Booking-Platform/static/js/main.02b2fc01.js",
     "static/js/453.e2c8263b.chunk.js": "/Space-Travel-Booking-Platform/static/js/453.e2c8263b.chunk.js",
     "static/media/jeremy-thomas-E0AHdsENmDg-unsplash.jpg": "/Space-Travel-Booking-Platform/static/media/jeremy-thomas-E0AHdsENmDg-unsplash.98e0fb16676720821442.jpg",
     "index.html": "/Space-Travel-Booking-Platform/index.html",
-    "main.c54d8337.css.map": "/Space-Travel-Booking-Platform/static/css/main.c54d8337.css.map",
+    "main.4539b42c.css.map": "/Space-Travel-Booking-Platform/static/css/main.4539b42c.css.map",
     "main.02b2fc01.js.map": "/Space-Travel-Booking-Platform/static/js/main.02b2fc01.js.map",
     "453.e2c8263b.chunk.js.map": "/Space-Travel-Booking-Platform/static/js/453.e2c8263b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c54d8337.css",
+    "static/css/main.4539b42c.css",
     "static/js/main.02b2fc01.js"
   ]
 }
