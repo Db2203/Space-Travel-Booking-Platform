@@ -1,0 +1,374 @@
+/* 
+  Fonts:
+  - Orbitron (futuristic)
+  - Poppins (body text)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("/home/dhruv/Projects/Space-Travel-Booking-Platform/space-travel/Images/jeremy-thomas-E0AHdsENmDg-unsplash.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* 
+  1) We remove heavy blurs—just a subtle overlay for mild contrast
+  2) Keep some gentle starry vibe without overbearing glassmorphism
+*/
+
+/* Subtle cosmic overlay: lighten or remove if you want zero overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar: sticky at top, subtle neon accent on hover */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #e640ff; /* neon accent */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: #e640ff;
+}
+
+/* Hero Section: no heavy blur overlay, just a mild dark fade */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Mild dark overlay on hero for text clarity */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Crisp neon glow on hero text */
+.hero-content h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(230, 64, 255, 0.8);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px rgba(230, 64, 255, 0.5);
+}
+
+/* Subtle scale animation for cosmic vibe */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Neon gradient button */
+.btn-hero {
+  background: linear-gradient(45deg, #ad00ff, #ff00aa);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ff00aa;
+}
+
+/* Shared Container: minimal blur or none, just a translucent background */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 30px auto;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Headings with subtle neon glow */
+.booking-section h2,
+.dashboard-section h2,
+.ai-tip-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  text-shadow: 0 0 6px rgba(230, 64, 255, 0.6);
+}
+
+/* Form styling: crisp borders, neon focus ring */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+  background-color: #f8f6f6 !important;
+  color: #161616;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border: 1px solid #e640ff;
+}
+
+/* General Buttons: same neon gradient */
+.btn-book,
+.btn-clear,
+.btn-back,
+.btn-refresh-tip {
+  display: inline-block;
+  background: linear-gradient(45deg, #ad00ff, #ff00aa);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 22px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 8px;
+}
+
+.btn-book:hover,
+.btn-clear:hover,
+.btn-back:hover,
+.btn-refresh-tip:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 12px #ff00aa;
+}
+
+/* Booking Cards */
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0 0 5px 0;
+}
+
+.booking-countdown p {
+  font-weight: 600;
+  font-size: 1em;
+  color: #f9caff;
+  margin: 0;
+}
+
+/* AI Tip styling */
+.ai-tip-section .tip {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Modal: crisp edges, no heavy blur */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInModal 0.5s ease forwards;
+  z-index: 999;
+}
+
+@keyframes fadeInModal {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.modal {
+  background: rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px 30px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  animation: popIn 0.4s ease forwards;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.modal-close {
+  background: linear-gradient(45deg, #ad00ff, #ff00aa);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.modal-close:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ff00aa;
+}
+
+/* Footer: minimal, crisp, no heavy blur */
+.footer {
+  background: rgba(0,0,0,0.6);
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.6);
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.footer .socials a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.footer .socials a img:hover {
+  transform: scale(1.1);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  .booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
