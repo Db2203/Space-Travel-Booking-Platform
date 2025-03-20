@@ -187,12 +187,20 @@ body::before {
   padding: 10px;
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 5px;
-  background: rgba(255,255,255,0.1);
-  background-color: #f8f6f6 !important;
-  color: #161616;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #f8efef;
   font-size: 1em;
   outline: none;
   transition: border 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+}
+select option {
+  background: #474545 !important; /* or any dark color */
+  color: #fff !important;
 }
 
 .form-group input:focus,
