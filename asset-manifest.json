@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Space-Travel-Booking-Platform/static/css/main.770f4c6c.css",
-    "main.js": "/Space-Travel-Booking-Platform/static/js/main.19577fc0.js",
+    "main.css": "/Space-Travel-Booking-Platform/static/css/main.41f827d4.css",
+    "main.js": "/Space-Travel-Booking-Platform/static/js/main.02b2fc01.js",
     "static/js/453.e2c8263b.chunk.js": "/Space-Travel-Booking-Platform/static/js/453.e2c8263b.chunk.js",
     "static/media/jeremy-thomas-E0AHdsENmDg-unsplash.jpg": "/Space-Travel-Booking-Platform/static/media/jeremy-thomas-E0AHdsENmDg-unsplash.98e0fb16676720821442.jpg",
     "index.html": "/Space-Travel-Booking-Platform/index.html",
-    "main.770f4c6c.css.map": "/Space-Travel-Booking-Platform/static/css/main.770f4c6c.css.map",
-    "main.19577fc0.js.map": "/Space-Travel-Booking-Platform/static/js/main.19577fc0.js.map",
+    "main.41f827d4.css.map": "/Space-Travel-Booking-Platform/static/css/main.41f827d4.css.map",
+    "main.02b2fc01.js.map": "/Space-Travel-Booking-Platform/static/js/main.02b2fc01.js.map",
     "453.e2c8263b.chunk.js.map": "/Space-Travel-Booking-Platform/static/js/453.e2c8263b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.770f4c6c.css",
-    "static/js/main.19577fc0.js"
+    "static/css/main.41f827d4.css",
+    "static/js/main.02b2fc01.js"
   ]
 }
